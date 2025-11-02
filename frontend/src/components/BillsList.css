@@ -1,0 +1,151 @@
+.bills-list {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.bills-list h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.no-bills {
+  text-align: center;
+  padding: 3rem;
+  color: #999;
+  font-size: 1.1rem;
+}
+
+.bills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.bill-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s;
+}
+
+.bill-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.bill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 2px solid #ddd;
+}
+
+.bill-shop {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.bill-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.bill-total {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+.bill-total span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.bill-type-badge {
+  display: inline-block;
+  background: #667eea;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.bill-items {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.items-header {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.items-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-row:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  flex: 1;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.item-details {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.item-quantity {
+  color: #666;
+  background: #f0f0f0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.item-category {
+  color: #999;
+  font-size: 0.75rem;
+  background: #f0f0f0;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .bills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
