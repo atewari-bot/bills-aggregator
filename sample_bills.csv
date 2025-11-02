@@ -1,0 +1,7 @@
+shop_name,date,total_amount,line_items
+Walmart,2024-01-15,45.67,"Milk 2L,1,3.99,Groceries|Bread,2,2.50,Groceries|Eggs Dozen,1,4.99,Groceries|Apple,1.5,5.99,Fruits & Vegetables|Orange Juice,2,7.50,Beverages"
+Target,2024-01-16,28.50,"Shampoo,1,6.75,Personal Care|Toilet Paper,1,9.99,Household|Snacks Mix,3,3.96,Snacks|Detergent,1,7.80,Household"
+Whole Foods,2024-01-18,67.25,"Organic Chicken,2,15.99,Meat & Seafood|Salmon Fillet,1,18.50,Meat & Seafood|Fresh Vegetables,1,12.50,Fruits & Vegetables|Organic Milk,2,8.99,Groceries|Honey,1,11.27,Groceries"
+CVS Pharmacy,2024-01-20,22.40,"Toothpaste,2,4.99,Personal Care|Vitamins,1,12.50,Personal Care|Hand Sanitizer,3,1.63,Personal Care"
+Safeway,2024-01-22,38.90,"Bananas,2,3.98,Fruits & Vegetables|Ground Beef,1.5,9.87,Meat & Seafood|Pasta,2,4.50,Groceries|Pasta Sauce,1,3.99,Groceries|Mozzarella Cheese,1,5.99,Groceries|Italian Bread,1,2.50,Groceries|Red Wine,1,8.97,Beverages"
+
