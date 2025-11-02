@@ -1,6 +1,9 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+// In Docker, the API is proxied through nginx, so use relative URL
+// For local development, use the backend URL
+const API_BASE_URL = process.env.REACT_APP_API_URL || 
+  (process.env.NODE_ENV === 'production' ? '/api' : 'http://localhost:5000/api');
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -57,6 +60,11 @@ export const fetchSummary = async (month = null, year = null) => {
   if (year) params.year = year;
   
   const response = await api.get('/analysis/summary', { params });
+  return response.data;
+};
+
+export const deleteAllBills = async () => {
+  const response = await api.delete('/bills');
   return response.data;
 };
 
