@@ -7,12 +7,11 @@ import {
   BarElement,
   ArcElement,
   PointElement,
-  LineElement,
   Title,
   Tooltip,
   Legend,
 } from 'chart.js';
-import { Bar, Doughnut, Line } from 'react-chartjs-2';
+import { Bar, Doughnut } from 'react-chartjs-2';
 
 ChartJS.register(
   CategoryScale,
@@ -20,45 +19,69 @@ ChartJS.register(
   BarElement,
   ArcElement,
   PointElement,
-  LineElement,
   Title,
   Tooltip,
   Legend
 );
 
+// Generate colors for categories (can handle any number of categories)
+const generateColors = (count) => {
+  const colors = [
+    'rgba(255, 99, 132, 0.8)',
+    'rgba(54, 162, 235, 0.8)',
+    'rgba(255, 206, 86, 0.8)',
+    'rgba(75, 192, 192, 0.8)',
+    'rgba(153, 102, 255, 0.8)',
+    'rgba(255, 159, 64, 0.8)',
+    'rgba(199, 199, 199, 0.8)',
+    'rgba(83, 102, 255, 0.8)',
+    'rgba(255, 99, 255, 0.8)',
+    'rgba(99, 255, 132, 0.8)',
+    'rgba(255, 182, 193, 0.8)',
+    'rgba(152, 251, 152, 0.8)',
+    'rgba(255, 218, 185, 0.8)',
+    'rgba(221, 160, 221, 0.8)',
+    'rgba(176, 224, 230, 0.8)',
+    'rgba(255, 228, 181, 0.8)',
+    'rgba(240, 128, 128, 0.8)',
+    'rgba(144, 238, 144, 0.8)',
+    'rgba(255, 165, 0, 0.8)',
+    'rgba(186, 85, 211, 0.8)',
+  ];
+  const categoryCount = count || 0;
+  const result = [];
+  for (let i = 0; i < categoryCount; i++) {
+    result.push(colors[i % colors.length]);
+  }
+  return result;
+};
+
 const AnalysisDashboard = ({ analysis, summary }) => {
   if (!analysis || !summary) return null;
 
-  // Prepare data for shop spending chart
-  const shopData = {
-    labels: analysis.shops?.map((s) => s.shop_name) || [],
-    datasets: [
-      {
-        label: 'Total Spent ($)',
-        data: analysis.shops?.map((s) => s.total_spent) || [],
-        backgroundColor: 'rgba(102, 126, 234, 0.8)',
-        borderColor: 'rgba(102, 126, 234, 1)',
-        borderWidth: 1,
-      },
-    ],
-  };
+  try {
+    // Prepare data for shop spending chart
+    const shopData = {
+      labels: analysis.shops?.map((s) => s.shop_name) || [],
+      datasets: [
+        {
+          label: 'Total Spent ($)',
+          data: analysis.shops?.map((s) => parseFloat(s.total_spent) || 0) || [],
+          backgroundColor: 'rgba(102, 126, 234, 0.8)',
+          borderColor: 'rgba(102, 126, 234, 1)',
+          borderWidth: 1,
+        },
+      ],
+    };
 
-  // Prepare data for category spending chart
+    // Prepare data for category spending chart
   const categoryData = {
     labels: analysis.categories?.map((c) => c.category) || [],
     datasets: [
       {
         label: 'Total Spent ($)',
-        data: analysis.categories?.map((c) => c.total_spent) || [],
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.8)',
-          'rgba(54, 162, 235, 0.8)',
-          'rgba(255, 206, 86, 0.8)',
-          'rgba(75, 192, 192, 0.8)',
-          'rgba(153, 102, 255, 0.8)',
-          'rgba(255, 159, 64, 0.8)',
-          'rgba(199, 199, 199, 0.8)',
-        ],
+        data: analysis.categories?.map((c) => parseFloat(c.total_spent) || 0) || [],
+        backgroundColor: generateColors(analysis.categories?.length || 0),
         borderWidth: 2,
       },
     ],
@@ -70,7 +93,7 @@ const AnalysisDashboard = ({ analysis, summary }) => {
     datasets: [
       {
         label: 'Total Spent ($)',
-        data: analysis.top_items?.slice(0, 10).map((i) => i.total_spent) || [],
+        data: analysis.top_items?.slice(0, 10).map((i) => parseFloat(i.total_spent) || 0) || [],
         backgroundColor: 'rgba(118, 75, 162, 0.8)',
         borderColor: 'rgba(118, 75, 162, 1)',
         borderWidth: 1,
@@ -199,7 +222,7 @@ const AnalysisDashboard = ({ analysis, summary }) => {
                   <tr key={index}>
                     <td>{shop.shop_name}</td>
                     <td>{shop.bill_count}</td>
-                    <td>${shop.total_spent.toFixed(2)}</td>
+                    <td>${(parseFloat(shop.total_spent) || 0).toFixed(2)}</td>
                   </tr>
                 ))
               ) : (
@@ -227,7 +250,7 @@ const AnalysisDashboard = ({ analysis, summary }) => {
                   <tr key={index}>
                     <td>{category.category}</td>
                     <td>{category.item_count}</td>
-                    <td>${category.total_spent.toFixed(2)}</td>
+                    <td>${(parseFloat(category.total_spent) || 0).toFixed(2)}</td>
                   </tr>
                 ))
               ) : (
@@ -241,6 +264,17 @@ const AnalysisDashboard = ({ analysis, summary }) => {
       </div>
     </div>
   );
+  } catch (error) {
+    console.error('Error rendering AnalysisDashboard:', error);
+    return (
+      <div className="analysis-dashboard">
+        <h2>📊 Monthly Analysis</h2>
+        <div className="error-message">
+          Error loading analysis data. Please try refreshing the page.
+        </div>
+      </div>
+    );
+  }
 };
 
 export default AnalysisDashboard;

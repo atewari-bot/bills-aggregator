@@ -3,7 +3,7 @@ import './App.css';
 import UploadSection from './components/UploadSection';
 import AnalysisDashboard from './components/AnalysisDashboard';
 import BillsList from './components/BillsList';
-import { fetchBills, fetchMonthlyAnalysis, fetchSummary } from './services/api';
+import { fetchBills, fetchMonthlyAnalysis, fetchSummary, deleteAllBills } from './services/api';
 
 function App() {
   const [bills, setBills] = useState([]);
@@ -30,6 +30,10 @@ function App() {
       setSummary(summaryData);
     } catch (error) {
       console.error('Error loading data:', error);
+      // Set empty data on error to prevent white screen
+      setBills([]);
+      setAnalysis(null);
+      setSummary(null);
     } finally {
       setLoading(false);
     }
@@ -37,6 +41,24 @@ function App() {
 
   const handleUploadSuccess = () => {
     loadData();
+  };
+
+  const handleClearDatabase = async () => {
+    if (!window.confirm('⚠️ Are you sure you want to delete ALL bills from the database? This action cannot be undone.')) {
+      return;
+    }
+    
+    try {
+      const result = await deleteAllBills();
+      alert(`✅ Database cleared successfully!\n\nDeleted:\n- ${result.bills_deleted} bills\n- ${result.line_items_deleted} line items`);
+      
+      // Reset state
+      setBills([]);
+      setAnalysis(null);
+      setSummary(null);
+    } catch (error) {
+      alert(`❌ Error clearing database: ${error.response?.data?.error || error.message}`);
+    }
   };
 
   return (
@@ -47,7 +69,16 @@ function App() {
       </header>
 
       <div className="container">
-        <UploadSection onUploadSuccess={handleUploadSuccess} />
+        <div className="header-actions">
+          <UploadSection onUploadSuccess={handleUploadSuccess} />
+          <button 
+            className="clear-db-button" 
+            onClick={handleClearDatabase}
+            title="Delete all bills from the database"
+          >
+            🗑️ Clear Database
+          </button>
+        </div>
 
         <div className="filters-section">
           <div className="filter-group">
@@ -87,7 +118,7 @@ function App() {
           <div className="loading">Loading...</div>
         ) : (
           <>
-            {summary && <AnalysisDashboard analysis={analysis} summary={summary} />}
+            {summary && analysis && <AnalysisDashboard analysis={analysis} summary={summary} />}
             <BillsList bills={bills} />
           </>
         )}

@@ -29,7 +29,7 @@ const BillsList = ({ bills }) => {
             </div>
 
             <div className="bill-total">
-              Total: <span>${bill.total_amount.toFixed(2)}</span>
+              Total: <span>${(parseFloat(bill.total_amount) || 0).toFixed(2)}</span>
             </div>
 
             <div className="bill-type-badge">
@@ -47,7 +47,7 @@ const BillsList = ({ bills }) => {
                         {item.quantity > 1 && (
                           <span className="item-quantity">{item.quantity}x</span>
                         )}
-                        <span className="item-price">${item.price.toFixed(2)}</span>
+                        <span className="item-price">${(parseFloat(item.price) || 0).toFixed(2)}</span>
                         <span className="item-category">{item.category}</span>
                       </div>
                     </div>

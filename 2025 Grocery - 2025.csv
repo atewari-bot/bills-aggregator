@@ -1,0 +1,106 @@
+Item Name,Item Type,Item Sub Type,Quantity, Unit measure,Cost per unit,Total amount paid,MRP,Date,Shop Address,Shopper Name,In-Store,Card Used,Item returned
+Strawberries,Grocery,Fruit,2,NA,$7.99,$15.98,,02/09/2025,Costco Wholesale,NA,Yes,NA,No
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Mustard Oil,Grocery,Oil,5,liters,NA,$17.99,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Opo Long,Grocery,Spice,2.47,lb,$1.09,$2.69,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Indian Okra,Grocery,Vegetable,1.28,lb,$3.29,$4.21,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Green beans,Grocery,Vegetable,1.72,lb,$1.29,$2.22,,2/15/2025 ,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Turmeric Yellow,Grocery,Spice,0.83,lb,$4.49,$3.73,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Apple Red,Grocery,Fruit,6.56,lb,$0.99,$6.49,, 2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+LG hing ,Grocery,Spice,200,grams,NA,$6.99,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+whip cream,Grocery,dairy,2,NA,$2.99,$5.98,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Chaat masala,Grocery,spice,1,NA,NA,$1.99,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Rajma,Grocery,Lenthils,2,lb,NA,$5.79,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Jammu Rajma,Grocery,Lenthils,2,lb,NA,$2.99,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Clove,Grocery,spice,3.5,ounce,NA,$7.99,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Khoa,Grocery,dairy,3,NA,$6.99,$20.97,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Cashew,Grocery,nuts,14,ounce,NA,$7.99,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Bell pepper,Grocery,vegetable,1.67,lb,$1.09,$1.82,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Methi,Grocery,vegetable,2,NA,$1.29,$2.58,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Cilantro,Grocery,herb,2,NA,$0.99,$1.98,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Cilantro Ea,Grocery,herb,1,NA,NA,$0.49,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Deep Maida,Grocery,flour,2,lb,NA,$3.49,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Urad whole,Grocery,Lenthils,4,lb,NA,$9.99,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Deep thin Sev,Grocery,Savory,340,grams,NA,$3.29,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Green peas,Grocery,vegetable,3.85,lb,NA,$8.99,,2/15/2025,"Apni Mandi, Milpitas",Harry Potter,Yes,Amex Plat,No
+Tax :,,,,,,NAN,,,,,,,
+,,,,,,,,,,,,,
+Jumbo Green Raisins,Grocery,nuts,14,ounce,NA,$7.99,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+Okra Indian,Grocery,vegetable,1.21,lb,$3.99,$4.83,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+Bottleguard,Grocery,vegetable,2.24,lb,$0.69,$1.55,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+Broccoli,Grocery,vegetable,0.92,lb,$0.99,$0.91,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+Guava,Grocery,fruit,3.02,lb,$5.99,$18.09,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+Apple Red,Grocery,fruit,4.37,lb,$1.29,$5.64,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+Green onion,Grocery,vegetable,4,NA,$0.49,$1.96,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+English peas,Grocery,vegetable,0.94,lb,$3.49,$3.28,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+Tindora,Grocery,vegetable,1.25,lb,$4.99,$6.24,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+Bittergourd,Grocery,vegetable,1.15,lb,$3.99,$4.59,,2/28/2025,"Coconut Hill, FRMT",Hermione Granger,Yes,Citi bank card,No
+Tax : ,,,,,,NAN,,,,,,,
+,,,,,,,,,,,,,
+Girls apparel,Apparel,Kids clothes ,1,NA,NA,$4.62,$24,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+Girls appar,Apparel,Kids clothes ,1,NA,NA,$4.62,,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+Girls sleepwear,Apparel,Kids clothes ,1,NA,NA,$4.89,,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+Tablewear,House imp.,Kitchen imp.,1,NA,NA,$5.94,,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+Kids shoes,Apparel,Shoes,1,NA,NA,$3.49,,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+TOD sleepwear,Apparel,Kids clothes ,1,NA,NA,$3.08,,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+Girls basic/ace,Apparel,Kids clothes ,1,NA,NA,$5.59,,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+Impulse,Apparel,Kids accessory ,1,NA,NA,$0.43,,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+Trim-a-tree,Apparel,NAN,1,NA,NA,$4.15,,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+Kids shoes,Apparel,Shoes ,1,NA,NA,$4.71,,2/29/2025,"KOHL'S, FRMT",Hermione Granger,Yes,Kohls Card,No
+Tax,,,,,,$4.26,,,,,,,
+,,,,,,,,,,,,,
+Organic A2,Grocery,Dairy,2,NA,13.69,$27.38,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Organic Whole milk,Grocery,Dairy,1,NA,NA,$12.69,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Bobs Steel Cut Oats,Grocery,Wheat,1,NA,NA,$11.99,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Fresh Guava,Grocery,Fruit,1,NA,NA,$6.49,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Orannic D'anjou,Grocery,Fruit,1,NA,NA,$9.99,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Mini Cukes,Grocery,Fruit,3,NA,$6.99,$20.97,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Panda Cookies,Grocery,Snacks,1,NA,NA,$9.69,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Org Green Beans,Grocery,Vegetable,1,NA,NA,$5.99,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Red Onions,Grocery,Vegetable,1,NA,NA,$5.49,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+ Avacados,Grocery,Fruits,1,NA,NA,$10.99,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citibank,No
+Mini Melon,Grocery,Fruits,1,NA,NA,$7.99,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Organic Garlic,Grocery,Vegetable,1,NA,NA,$8.99,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Organic Tov,Grocery,Fruit,1,NA,NA,$9.99,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Neut Rainbath,Toiletries,Body soap,1,NA,NA,$19.99,$14.99,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Salmon,Groceries,Seafood,1,NA,NA,$31.29,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Honey,Groceries,Syrup,1,NA,NA,$12.99,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Basil Pesto ,Groceries,Paste,1,NA,NA,$9.49,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Potatoes,Groceries,vegetable,10,lb,NA,$5.49,,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Mung Daal,Groceries,Daal,1,NA,NA,$13.49,$10.79,03/09/2025,Costco Wholesale,Hermione Granger,Yes,citi bank,No
+Tax : ,,,,,,$1.54,,,,,,,
+,,,,,,,,,,,,,
+Gold atta,Groceries,Grain,10,lb,NA,$10.99,,03/10/2025,Coconut Hill,,Yes,citi bank,No
+Apple Gala,Groceries,Fruit,4.24,lb,$1.49,$6.32,,03/10/2025,Coconut Hill,,Yes,citi bank,No
+Basmati Rice ,Groceries,Wheat,10,lb,NA,$14.99,,03/10/2025,Coconut Hill,,Yes,citi bank,No
+Bhujiya (Plain),Groceries,Snacks,400,g,NA,$3.49,,03/10/2025,Coconut Hill,,Yes,citi bank,No
+Tax : ,,,,,,$0.00,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$1.80,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$1.80,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$14.00,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$5.00,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$5.00,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$14.00,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$14.00,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$6.00,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$22.00,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$6.00,,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$6.00,,,,,,,
+All in Motion,Apperal,Shoes,1,NA,NA,$10.00,$20.00,,,,,,
+Cat & Jack,Apperal,Clothes,1,NA,NA,$1.49,$4.99,,,,,,
+MCCORMICK,,,,,,,,,,,,,
+Health&Beauty,,,,,,,,,,,,,
+art class,,,,,,,,,,,,,
+Cat & Jack,,,,,,,,,,,,,
+Cat & Jack,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+Tax : ,,,,,,$10.25,,,,,,,
+,,,,,,,,,,,,,
+Sooji Coarse,Grocery,Wheat,2,lb,NA,$2.99,,03/14/2025,Coconut Hill,Hermione Granger,Yes,citi bank,No
+Apple Red,Grocery,Fruit,4.93,lb,$1.29,$6.36,,03/14/2025,Coconut Hill,Hermione Granger,Yes,citi bank,No
+Cilantro,Grocery,Herb,2,bunches,$0.29,$0.58,,03/14/2025,Coconut Hill,Hermione Granger,Yes,citi bank,No
+Pooja Item,House Improvment, Pooja item,2,NA,$0.99,$1.98,,03/14/2025,Coconut Hill,Hermione Granger,Yes,citi bank,No
+Tax : ,,,,,,$0.20,,,,,,,

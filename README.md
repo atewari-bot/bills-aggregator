@@ -28,7 +28,57 @@ A full-stack application for uploading, analyzing, and tracking bills. Upload bi
 
 ## Installation
 
-### Prerequisites
+You can run the application using Docker (recommended) or install it locally.
+
+### Option 1: Docker (Recommended)
+
+#### Prerequisites
+- Docker Desktop or Docker Engine 20.10+
+- Docker Compose 2.0+
+
+#### Quick Start with Docker
+
+```bash
+# Build and start the application
+docker-compose up --build
+
+# Or use Makefile commands
+make start
+```
+
+The application will be available at:
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:5000
+
+#### Development Mode with Docker
+
+```bash
+# Start development environment with hot-reload
+docker-compose -f docker-compose.dev.yml up --build
+
+# Or use Makefile
+make start-dev
+```
+
+#### Docker Commands
+
+```bash
+# Stop containers
+docker-compose down
+
+# View logs
+docker-compose logs -f
+
+# Rebuild containers
+docker-compose build --no-cache
+
+# Clean up volumes and containers
+make clean
+```
+
+### Option 2: Local Installation
+
+#### Prerequisites
 
 - Python 3.8+
 - Node.js 16+
@@ -110,7 +160,11 @@ The frontend will run on `http://localhost:3000`
 1. Click on "Upload Bills" section
 2. Select "CSV" upload type
 3. Click "Click to upload CSV file"
-4. Upload a CSV file with the following format:
+4. Upload a CSV file in one of the supported formats:
+
+#### Format 1: Bill Summary Format
+
+Each row represents a complete bill:
 
 ```csv
 shop_name,date,total_amount,line_items
@@ -118,11 +172,37 @@ Walmart,2024-01-15,45.67,"Milk 2L,1,3.99,Groceries|Bread,2,2.50,Groceries|Eggs D
 Target,2024-01-16,28.50,"Shampoo,1,6.75,Personal Care|Toilet Paper,1,9.99,Household|Snacks,3,3.96,Snacks"
 ```
 
-**CSV Format:**
+**Columns:**
 - `shop_name`: Name of the shop/store
 - `date`: Date in YYYY-MM-DD format
 - `total_amount`: Total bill amount
 - `line_items`: Pipe-separated (`|`) list of items, each item format: `name,quantity,price,category`
+
+#### Format 2: Line Item Format (Recommended)
+
+Each row represents a single line item. The app automatically groups items by date and shop:
+
+```csv
+Item Name,Item Type,Item Sub Type,Quantity,Unit measure,Cost per unit,Total amount paid,Date,Shop Address
+Strawberries,Grocery,Fruit,2,NA,$7.99,$15.98,02/09/2025,Costco Wholesale
+Mustard Oil,Grocery,Oil,5,liters,NA,$17.99,2/15/2025,Apni Mandi
+```
+
+**Columns:**
+- `Item Name`: Name of the item
+- `Item Type`: Main category (e.g., Grocery, Apparel)
+- `Item Sub Type`: Sub-category (e.g., Fruit, Vegetable)
+- `Quantity`: Quantity purchased
+- `Unit measure`: Unit of measurement (lb, liters, etc.)
+- `Cost per unit`: Price per unit (optional)
+- `Total amount paid`: Total price for this item
+- `Date`: Purchase date (supports formats: MM/DD/YYYY, YYYY-MM-DD)
+- `Shop Address`: Name/address of the shop
+
+The app will automatically:
+- Group items by Date and Shop Address to create bills
+- Calculate total bill amount from line items
+- Categorize items based on Item Sub Type or Item Type
 
 ### Viewing Analysis
 
@@ -168,6 +248,7 @@ Get summary statistics
 ```
 bills-aggregator/
 ├── backend/
+│   ├── Dockerfile             # Backend Docker image
 │   ├── app.py                 # Flask application
 │   ├── models.py              # Database models
 │   ├── requirements.txt      # Python dependencies
@@ -176,12 +257,18 @@ bills-aggregator/
 │   │   └── analysis_service.py # Analysis service
 │   └── uploads/              # Uploaded files directory
 ├── frontend/
+│   ├── Dockerfile             # Frontend production Docker image
+│   ├── Dockerfile.dev         # Frontend development Docker image
+│   ├── nginx.conf             # Nginx configuration for production
 │   ├── public/
 │   ├── src/
 │   │   ├── App.js            # Main app component
 │   │   ├── components/       # React components
 │   │   └── services/         # API service
 │   └── package.json
+├── docker-compose.yml         # Production Docker Compose
+├── docker-compose.dev.yml     # Development Docker Compose
+├── Makefile                   # Convenience commands
 ├── README.md
 └── .gitignore
 ```

@@ -1,0 +1,17 @@
+node_modules
+__pycache__
+*.pyc
+*.db
+*.sqlite
+*.sqlite3
+.env
+.env.local
+.git
+.gitignore
+.DS_Store
+coverage
+.nyc_output
+*.log
+venv
+env
+
